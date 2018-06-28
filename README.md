@@ -1,4 +1,4 @@
-# Ciriculum Vitae
+# Cirriculum Vitae
 ====================
 
 cv
