@@ -1,0 +1,57 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\pagestyle{empty}
+\usepackage[dvipsnames,table]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, allcolors={black}}
+\usepackage[a4paper,margin=51pt, showframe]{geometry}
+\usepackage{tabularx, array}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+
+\usepackage{tgbonum}
+
+\setlength{\arrayrulewidth}{4px}
+\setlength{\tabcolsep}{7px}
+\renewcommand{\arraystretch}{1.5}
+\arrayrulecolor[HTML]{ff9d00}
+
+\def\mydate{\leavevmode\hbox{\the\day-\twodigits\month-\twodigits\year}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+\definecolor{links}{HTML}{000e71}
+\definecolor{mail}{HTML}{000e71}
+\definecolor{cvcolor}{HTML}{ff9d00}
+
+\newtcbox{\mybox}{flush left, halign=center,valign=center, colback=cvcolor!5!white, boxrule=0px,arc=27pt,boxsep=0pt,width=51pt,height=51pt}
+
+\title{CV_Goran_Cvijanovic}
+\author{Goran Cvijnanović}
+\date{\mydate}
+\graphicspath{{./img/}}
+
+\begin{document}
+\tikz[remember picture,overlay] \node[opacity=0.05, xshift=8.9cm, yshift=-3.8cm] at (current page.north west){\includegraphics[width=101px]{logo}};
+{\fontfamily{qtm}\selectfont
+  \begin{table}[t!]
+    \begin{tabularx}{\textwidth}{c|cr}
+        \raisebox{-.5\height}{\includegraphics[width=101px]{picture}}&
+      \begin{tabular}[c]{c}
+        \href{mailto:goran.rs.bg@gmail.com}{\textcolor{mail}{goran.rs.bg}@gmail.com} \\
+        \href{tel:0641472353}{064\color{links}/\color{black}147\color{links}-\color{black}23\color{links}-\color{black}53} \\
+        \href{https://github.com/goranrsbg}{\textcolor{links}{G}it} \\
+        \href{https://www.linkedin.com/in/goranrsbg}{\textcolor{links}{L}inked\textcolor{links}{In}}
+      \end{tabular}&
+      \begin{tabular}[r]{r}
+        \mybox{\color{cvcolor} \LARGE{Ciriculum Vitae}}
+      \end{tabular}
+    \end{tabularx}
+  \end{table}
+  \section*{}
+    Body.
+  \section*{}
+    Futter.
+}
+\end{document}
