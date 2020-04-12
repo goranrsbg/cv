@@ -3,55 +3,79 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\pagestyle{empty}
 \usepackage[dvipsnames,table]{xcolor}
 \usepackage{hyperref}
-\hypersetup{colorlinks=true, allcolors={black}}
-\usepackage[a4paper,margin=51pt, showframe]{geometry}
+\usepackage[a4paper,margin=51pt]{geometry}
 \usepackage{tabularx, array}
 \usepackage{tikz}
-\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\graphicspath{{./img/}}
+\hypersetup{colorlinks=true, allcolors={black}}
 
-\usepackage{tgbonum}
-
-\setlength{\arrayrulewidth}{4px}
-\setlength{\tabcolsep}{7px}
-\renewcommand{\arraystretch}{1.5}
-\arrayrulecolor[HTML]{ff9d00}
-
-\def\mydate{\leavevmode\hbox{\the\day-\twodigits\month-\twodigits\year}}
-\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
 \definecolor{links}{HTML}{000e71}
 \definecolor{mail}{HTML}{000e71}
 \definecolor{cvcolor}{HTML}{ff9d00}
 
-\newtcbox{\mybox}{flush left, halign=center,valign=center, colback=cvcolor!5!white, boxrule=0px,arc=27pt,boxsep=0pt,width=51pt,height=51pt}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+\def\mydate{\twodigits\day.\twodigits\month.\twodigits\year.}
+
+\setlength{\arrayrulewidth}{1px}
+\setlength{\tabcolsep}{7px}
+\renewcommand{\arraystretch}{1.5}
+\arrayrulecolor{cvcolor}
+
+%paragraph
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.5em}
+\renewcommand{\baselinestretch}{1.2}
 
 \title{CV_Goran_Cvijanovic}
 \author{Goran Cvijnanović}
 \date{\mydate}
-\graphicspath{{./img/}}
+
 
 \begin{document}
-\tikz[remember picture,overlay] \node[opacity=0.05, xshift=8.9cm, yshift=-3.8cm] at (current page.north west){\includegraphics[width=101px]{logo}};
-{\fontfamily{qtm}\selectfont
+\thispagestyle{fancy}
+\fancyhead[L,C,R]{}
+\fancyfoot[L]{Kreiran}
+\fancyfoot[C]{@}
+\fancyfoot[R]{\mydate}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.7pt}
+
+\tikz[remember picture,overlay] \node[opacity=0.05, xshift=8.45cm, yshift=-3.6cm] at (current page.north west){\includegraphics[width=97px]{logo}};
+{\fontfamily{qag}\selectfont
   \begin{table}[t!]
-    \begin{tabularx}{\textwidth}{c|cr}
-        \raisebox{-.5\height}{\includegraphics[width=101px]{picture}}&
+    \begin{tabularx}{\textwidth}{l|cXr}
+      \raisebox{-.5\height}{\includegraphics[width=101px]{picture}}&
       \begin{tabular}[c]{c}
         \href{mailto:goran.rs.bg@gmail.com}{\textcolor{mail}{goran.rs.bg}@gmail.com} \\
         \href{tel:0641472353}{064\color{links}/\color{black}147\color{links}-\color{black}23\color{links}-\color{black}53} \\
         \href{https://github.com/goranrsbg}{\textcolor{links}{G}it} \\
-        \href{https://www.linkedin.com/in/goranrsbg}{\textcolor{links}{L}inked\textcolor{links}{In}}
-      \end{tabular}&
+        \href{https://www.linkedin.com/in/goranrsbg}{\textcolor{links}{L}inked\textcolor{links}{In}}               
+      \end{tabular}&&
       \begin{tabular}[r]{r}
-        \mybox{\color{cvcolor} \LARGE{Ciriculum Vitae}}
+        \includegraphics[width=187px]{cir_vit}
       \end{tabular}
     \end{tabularx}
   \end{table}
-  \section*{}
-    Body.
-  \section*{}
-    Futter.
+  \begin{center}
+    {\fontfamily{phv}\selectfont
+      \Large Goran Cvijanović
+    }
+  \end{center}
+  \section*{Bio}
+  \begin{multicols}{2}
+  [
+    Where does it come from?
+  ]    
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. 
+  \end{multicols}
+
+
+  \vfill
+  \section*{Footer}
+    \mydate
 }
 \end{document}
