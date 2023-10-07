@@ -1,4 +1,4 @@
 # Cirriculum Vitae
 ====================
 
-CV napravio GC.
+CV made by GC.
