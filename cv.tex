@@ -1,135 +1,164 @@
-\documentclass[a4paper,11pt]{article}
-
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{multirow}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx}
-\usepackage[dvipsnames,table]{xcolor}
-\usepackage{hyperref}
-\usepackage[a4paper,margin=51pt]{geometry}
-\usepackage{tabularx, array}
-\usepackage{tikz}
-\usepackage{fancyhdr}
-\usepackage{multicol}
-\usepackage{titlesec}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
 
-\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
-\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
-\graphicspath{{./img/}}
-\hypersetup{colorlinks=true, allcolors={black}}
-
-\definecolor{links}{HTML}{000e71}
-\definecolor{mail}{HTML}{000e71}
-\definecolor{cvcolor}{HTML}{ff9d00}
-
-\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
-\def\mydate{\twodigits\day.\twodigits\month.\twodigits\year.}
-
-\setlength{\arrayrulewidth}{1px}
-\setlength{\tabcolsep}{7px}
-\arrayrulecolor{cvcolor}
-
-%paragraph
-\setlength{\parindent}{1em}
-\setlength{\parskip}{0.5em}
-
-\title{CV_Goran_Cvijanovic}
-\author{Goran Cvijnanović}
-\date{\mydate}
-
+\author{}
+\date{}
 
 \begin{document}
-\thispagestyle{fancy}
-\fancyhead[L,C,R]{}
-\fancyfoot[L]{Kreiran}
-\fancyfoot[C]{@}
-\fancyfoot[R]{\mydate}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{1pt}
 
-% \tikz[remember picture,overlay] \node[opacity=0.05, xshift=8.45cm, yshift=-3.6cm] at (current page.north west){\includegraphics[width=97px]{logo}};
-{\fontfamily{qag}\selectfont
-  \begin{table}[t!]
-    \begin{tabularx}{\textwidth}{l|cXr}
-      \raisebox{-.5\height}{\includegraphics[width=101px]{picture}}&
-      \def\arraystretch{1.5}
-      \begin{tabular}[c]{c}
-        \href{mailto:goran.rs.bg@gmail.com}{\textcolor{mail}{goran.rs.bg@}gmail.com} \\[-2pt]
-        \href{tel:0641472353}{\color{links}064\color{black}{/}\color{links}147\color{black}{-}\color{links}23\color{black}{-}\color{links}53} \\[-2pt]
-        \href{https://github.com/goranrsbg}{\textcolor{links}{G}it\color{links}{Hub}}
-        \href{https://www.linkedin.com/in/goranrsbg}{, \textcolor{links}{Link}ed\textcolor{links}{In}} \\[-2pt]
-        16.11.1982. \\[-2pt]
-        Beograd, Palilula \\[-2pt]
-        B kategorija 
-      \end{tabular}
-      \def\arraystretch{1}
-      &&
-      \begin{tabular}[r]{r}
-        \includegraphics[width=157px]{cir_vit}
-      \end{tabular}
-    \end{tabularx}
-  \end{table}
-  \begin{center}
-    {\fontfamily{phv}\selectfont
-      \Large Goran Cvijanović
-    }
-  \end{center}
-  
-  \section*{Poslovni profil}
-  
-Samoučeni programer, koji je svoje prve programerske redove napisao u srednjoj školi i od tad zavoleo programiranje, odnosno pisanje koda zarad rešavanja jednostavnijih ka složenijim problemima. Godinama unazad aktivno programira kreirajući raznovrsne, korisne aplikacije.
-  
-  \section*{Radno iskustvo}
-  
-  \begin{tabular}{r|l}
-    2019 - Trenutno  & Izrada obračunskih i drugih dokumenata, koristeći\\ 
-                     & Libre Office Calc/Writer sa mojim funkcjama za brži rad\\
-                     & i JavaFX aplikaciju za slanje mejlova (javax.mail).\\
-                     & \emph{Freelance}\\
-    \multicolumn{2}{c}{} \\
-    Prethodno - 2019 & Poslovi koji nisu imali veze sa programiranjem ili bilo kakvim\\
-                     & radom na računaru. Slobodno vreme sam posvetio programiranju.\\
-                     & \emph{Smederevo, Beograd}\\
-    % ---------------------------------------------------
-  \end{tabular}
-  
-  \section*{Obrazovanje}
-  
-  \begin{tabular}{r|l}
-    2000 - 2002 & Matematički fakultet, \emph{Univerzitet u Beogradu}\\
-    \multicolumn{2}{c}{} \\
-    1996 - 2000 & Elektrotehničar računara, \emph{Tehnička škola}, Smederevo\\
-    \multicolumn{2}{c}{} \\
-    2012 - 2013 & Software developer, \emph{IT Academy}, Beograd\\ 
-    % ---------------------------------------------------
-  \end{tabular}
-  
-  \section*{Tehničke veštine}
-  
-  \begin{tabular}{r|l}
-    Naprednije: & Java, JavaFX, MySql, algoritmi, OOP\\
-     \multicolumn{2}{c}{} \\
-    Srednje:  & Hibernate, PHP, Laravel, Apache Derby, JS,  HTML, CSS, Sass, Git, Linux/Win\\ 
-              & lit-html, Vue.js, Angular, C, Agile, {\LaTeX}, OOBasic/Visula Basic\\
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule()
+\multirow{5}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+\includegraphics[width=1.17917in,height=1.17778in]{img/photo.png}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbar goran.rs.bg@gmail.com
+\end{quote}
+\end{minipage} &
+\multirow{5}{*}{\begin{minipage}[b]{\linewidth}\raggedright
+Goran Cvijanović
+\end{minipage}} \\
+& \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbar(+381)64/147-23-53
+\end{quote}
+\end{minipage} \\
+& \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbar github.com/goranrsbg
+\end{quote}
+\end{minipage} \\
+& \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbar November 16, 1982
+\end{quote}
+\end{minipage} \\
+& \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+\textbar Branka Miljkovica 1a/6, Belgrade
+\end{quote}
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
 
-  \end{tabular}
-  
-  \section*{Istaknuti projekti}
-    
-    \begin{tabular}{r|l}
-    
-      \href{http://www.zvono.nastavnikinformatike.com}{\textcolor{links}{eZvono}} & www.zvono.nastavnikinformatike.com\\
-      \href{https://github.com/goranrsbg/HouseOfTheRisingSun}{\textcolor{links}{BB-BB-lokator}} & github.com/goranrsbg/HouseOfTheRisingSun\\
-      \href{https://github.com/goranrsbg/files-shuffle}{\textcolor{links}{Shuffle My Files}} & github.com/goranrsbg/files-shuffle\\
-      \href{https://github.com/goranrsbg/GRKreator}{\textcolor{links}{Kreator gotovinskog računa}} & github.com/goranrsbg/GRKreator\\
-    
-    \end{tabular}
-    
-  \section*{Interesovanja i aktivnosti}
+\begin{quote}
+WORK EXPERIENCE
 
-   programerska edukacija, tehnologija, open-source, sport (basket, kuglanje, bilijar, plivanje),
-   matematika, filozofija, klasična muzika, linux
-  
-  % \vfill
-  % Hvala na izdvojenom vremenu i razumevanju.
-}
+2018 -- current (part-time) -- Head Administrator at NewCare LM Group,
+Ltd., Care Connection 12 Ltd., Medical Care Pro Ltd. (Doncaster, UK)
+2021 -- current (part-time) -- Chief Data Officer at Impact Energy
+Partners, LLC (California, US)\\
+2015 -- 2021 -- Freelancer, Independent engagement
+
+EDUCATION
+
+2021 -- 2022 -- Domo University, DomoMajor Certificate\\
+2012 -- 2013 -- IT Academy, Software Developer Certificate\\
+2000 -- 2002 -- University of Belgrade, Faculty of Mathematics,
+Programming Department 1996 -- 2000 -- High School of Electrical
+Engineering, IT Department
+
+SOFTWARE PROJECTS
+
+G-Sheet w/ custom arithmetic script\\
+(for Impact Energy Partners, LLC)\\
+BI Domo dashboards, charts, data connections, data transformations\\
+(for Impact Energy Partners, LLC)\\
+Electronic ``Bell'' web app in PhP Laravel and Lit web components,
+MariaDB\\
+(for Elementary School ``Đura Jakšić'' in Kovin)\\
+LibreOffice Calc template document w/ numerous custom-scripts, tables
+for invoice generation (for NewCare LM Group, Ltd., Care Connection 12
+Ltd., Medical Care Pro Ltd.)\\
+Web page in PhP Laravel with Lit web components, MariaDB\\
+(for ``Daxer N'' company in Smederevo)\\
+JavaFX app with Hibernate, MariaDB for automatic email sending w/
+attachment\\
+(for NewCare LM Group, Ltd., Care Connection 12 Ltd., Medical Care Pro
+Ltd.)
+
+LANGUAGES
+
+English -- Intermediate proficiency (speaking, writing, reading)
+
+SKILLS
+
+Coding fundamentals, Java, JavaFX, JavaScript, MySql, Data Analyst
+\end{quote}
+
 \end{document}
