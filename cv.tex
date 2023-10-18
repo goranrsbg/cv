@@ -1,140 +1,43 @@
-% Options for packages loaded elsewhere
-\PassOptionsToPackage{unicode}{hyperref}
-\PassOptionsToPackage{hyphens}{url}
-%
-\documentclass[
-]{article}
-\usepackage{amsmath,amssymb}
-\usepackage{lmodern}
-\usepackage{iftex}
-\ifPDFTeX
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provide euro and other symbols
-\else % if luatex or xetex
-  \usepackage{unicode-math}
-  \defaultfontfeatures{Scale=MatchLowercase}
-  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-\fi
-% Use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
-  \usepackage[]{microtype}
-  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
-\makeatother
-\usepackage{xcolor}
-\usepackage{longtable,booktabs,array}
-\usepackage{multirow}
-\usepackage{calc} % for calculating minipage widths
-% Correct order of tables after \paragraph or \subparagraph
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
-\makeatother
-% Allow footnotes in longtable head/foot
-\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
-\makesavenoteenv{longtable}
+\documentclass{article}
+\usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-% Set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
-\hypersetup{
-  hidelinks,
-  pdfcreator={LaTeX}}
 
-\author{}
-\date{}
+\author{ Cvijanović, Goran}
+\title{Cirriciulum Vitae}
 
 \begin{document}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
-\toprule()
-\multirow{5}{*}{\begin{minipage}[b]{\linewidth}\raggedright
 \includegraphics[width=1.17917in,height=1.17778in]{img/photo.png}
-\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-\textbar goran.rs.bg@gmail.com
-\end{quote}
-\end{minipage} &
-\multirow{5}{*}{\begin{minipage}[b]{\linewidth}\raggedright
-Goran Cvijanović
-\end{minipage}} \\
-& \begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-\textbar(+381)64/147-23-53
-\end{quote}
-\end{minipage} \\
-& \begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-\textbar github.com/goranrsbg
-\end{quote}
-\end{minipage} \\
-& \begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-\textbar November 16, 1982
-\end{quote}
-\end{minipage} \\
-& \begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-\textbar Branka Miljkovica 1a/6, Belgrade
-\end{quote}
-\end{minipage} \\
-\midrule()
-\endhead
-\bottomrule()
-\end{longtable}
 
-\begin{quote}
-WORK EXPERIENCE
+\textbar{} goran.rs.bg@gmail.com
 
-2022 -- current (full-time) -- Software Engineer at Comyno dlt d.o.o.
+\textbar{} Goran Cvijanović
+
+\textbar{} 064/147-23-53
+
+\textbar{} www.github.com/goranrsbg
+
+\textbar{} November 16, 1982
+
+\textbar{} Branka Miljkovica 1a/6, Belgrade
+
+\section{WORK EXPERIENCE}
+
+2022 -- current (full-time) -- Software Engineer at Comyno dlt d.o.o.\\
 2021 -- 2022 (part-time) -- Chief Data Officer at Impact Energy
 Partners, LLC (California, US)\\
 2018 -- 2022 (part-time) -- Head Administrator at NewCare LM Group,
-Ltd., Care Connection 12 Ltd., Medical Care Pro Ltd. (Doncaster, UK)
+Ltd., Care Connection 12 Ltd., Medical Care Pro Ltd. (Doncaster, UK)\\
 2015 -- 2021 -- Freelancer, Independent engagement
 
-EDUCATION
+\section{EDUCATION}
 
 2021 -- 2022 -- Domo University, DomoMajor Certificate\\
 2012 -- 2013 -- IT Academy, Software Developer Certificate\\
-2000 -- 2002 -- University of Belgrade, Faculty of Mathematics,
-Programming Department 1996 -- 2000 -- High School of Electrical
-Engineering, IT Department
+2000 -- 2002 -- University of Belgrade, Faculty of Mathematics 
+1996 -- 2000 -- High School of Electrical Engineering
 
-SOFTWARE PROJECTS
+\section{SOFTWARE PROJECTS}
 
 Fintech App, Primefaces, Hibernate, JavaEE 8\\
 (for Comyno dlt d.o.o.)
@@ -152,18 +55,16 @@ for invoice generation (for NewCare LM Group, Ltd., Care Connection 12
 Ltd., Medical Care Pro Ltd.)\\
 Web page in PhP Laravel with Lit web components, MariaDB\\
 (for ``Daxer N'' company in Smederevo)\\
-JavaFX app with Hibernate, MariaDB for automatic email sending w/
-attachment\\
+JavaFX app with Hibernate, MariaDB for automatic email sending with attachment\\
 (for NewCare LM Group, Ltd., Care Connection 12 Ltd., Medical Care Pro
 Ltd.)
 
-LANGUAGES
+\section{LANGUAGES}
 
 English -- Intermediate proficiency (speaking, writing, reading)
 
-SKILLS
+\section{SKILLS}
 
-Coding fundamentals, JavaEE, JPA, JMS, JSP, Oracle DB, Quarkus, JavaFX, MySql, JavaScript, Data Analyst
-\end{quote}
+Coding fundamentals, JavaEE, JPA, JMS, JSP,  Quarkus, JavaFX, Oracle DB, MySql
 
 \end{document}
