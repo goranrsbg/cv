@@ -1,4 +1,5 @@
-# Cirriculum Vitae
-====================
+# Resume
+  ======
 
 CV made by GC.
+
