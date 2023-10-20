@@ -1,70 +1,90 @@
 \documentclass{article}
+
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage[dayofweek]{datetime}
+\usepackage[margin=1in]{geometry}
+\usepackage{wrapfig}
 
-\author{ Cvijanović, Goran}
-\title{Cirriciulum Vitae}
+\newdate{theDate}{\day}{\month}{\year}
+\renewcommand{\dateseparator}{.}
+\graphicspath{{img/}}
+\pagenumbering{gobble}
+
+\titleformat{\section}
+{}
+{}
+{0pt}
+{}[\titlerule]
 
 \begin{document}
 
-\includegraphics[width=1.17917in,height=1.17778in]{img/photo.png}
+\author{ Cvijanović, Goran}
+\title{Curriciulum Vitae}
 
-\textbar{} goran.rs.bg@gmail.com
+\begin{wrapfigure}{l}{17pt}
+\includegraphics[width=73pt]{photo.png}
+\end{wrapfigure}
 
-\textbar{} Goran Cvijanović
+Cvijanović Goran \\
+goran.rs.bg@gmail.com \\
+064/147-23-53 \\
+November 16, 1982 \\
+Branka Miljkovica 1a/6, Belgrade 11210 \\
+www.github.com/goranrsbg
 
-\textbar{} 064/147-23-53
+\section{\textsc{Work Experience}}
 
-\textbar{} www.github.com/goranrsbg
+\begin{tabular}{l | l} 
+2022 -- current (full-time) & Software Engineer at Comyno dlt d.o.o.\\
+2021 -- 2022 (part-time)  & Chief Data Officer at Impact Energy Partners, LLC (California, US)\\
+2018 -- 2022 (part-time)  & Head Administrator at NewCare LM Group Ltd., Care Connection 12 Ltd., Medical Care Pro Ltd. (Doncaster, UK)\\
+2015 -- 2021                    & Freelancer, Independent engagement
+\end{tabular}
 
-\textbar{} November 16, 1982
+\section{\textsc{Education}}
 
-\textbar{} Branka Miljkovica 1a/6, Belgrade
+2021 -- 2022 -- Domo University, DomoMajor Certificate, On line \\
+2012 -- 2013 -- IT Academy, Software Developer Certificate, Belgrade \\
+2000 -- 2002 -- Faculty of Mathematics, University of Belgrade \\
+1996 -- 2000 -- High School of Electrical Engineering, Smederevo
 
-\section{WORK EXPERIENCE}
+\section{\textsc{Software Projects}}
 
-2022 -- current (full-time) -- Software Engineer at Comyno dlt d.o.o.\\
-2021 -- 2022 (part-time) -- Chief Data Officer at Impact Energy
-Partners, LLC (California, US)\\
-2018 -- 2022 (part-time) -- Head Administrator at NewCare LM Group,
-Ltd., Care Connection 12 Ltd., Medical Care Pro Ltd. (Doncaster, UK)\\
-2015 -- 2021 -- Freelancer, Independent engagement
+\begin{itemize}
+  
+\item  Fintech App, Primefaces, Hibernate, JavaEE 8, Oracle DB\\
+$\rangle\!\rangle$ Comyno dlt d.o.o.
+\item Connector App, Quarkus, from rest $\hookrightarrow$ convert and push $\mapsto$ JMS\\
+$\rangle\!\rangle$ Comyno dlt d.o.o. for six month period
+\item G-Sheet, custom arithmetic script\\
+$\rangle\!\rangle$ Impact Energy Partners, LLC
+\item BI Domo dashboards, charts, data connections, data transformations SQL\\
+$\rangle\!\rangle$ Impact Energy Partners, LLC
+\item Electronic ``Bell'' web app in PhP Laravel and Lit web components, MariaDB\\
+$\rangle\!\rangle$ Elementary School ``Đura Jakšić''  $\in$ Kovin
+\item LibreOffice Calc template document numerous custom-scripts, tables for invoice generation\\ 
+$\rangle\!\rangle$ NewCare LM Group, Ltd., Care Connection 12Ltd., Medical Care Pro Ltd.
+\item Web page in LaravelPhP using Lit web components, MariaDB\\
+$\rangle\!\rangle$ ``Daxer N'' company in Smederevo
+\item JavaFX app with Hibernate, MariaDB for automatic email sending with attached invoice\\
+$\rangle\!\rangle$ NewCare LM Group, Ltd., Care Connection 12 Ltd., Medical Care Pro Ltd.
+\end{itemize}
 
-\section{EDUCATION}
+\section{\textsc{Language}}
 
-2021 -- 2022 -- Domo University, DomoMajor Certificate\\
-2012 -- 2013 -- IT Academy, Software Developer Certificate\\
-2000 -- 2002 -- University of Belgrade, Faculty of Mathematics 
-1996 -- 2000 -- High School of Electrical Engineering
+English  -- Intermediate proficiency (speaking, writing, reading)\\
+Russian -- Beginner
 
-\section{SOFTWARE PROJECTS}
+\section{\textsc{Skills}}
 
-Fintech App, Primefaces, Hibernate, JavaEE 8\\
-(for Comyno dlt d.o.o.)
-Connector App, Quarkus, read rest on one side, convert and push to JMS to other side
-(for Comyno dlt d.o.o. for six month period)
-G-Sheet w/ custom arithmetic script\\
-(for Impact Energy Partners, LLC)\\
-BI Domo dashboards, charts, data connections, data transformations\\
-(for Impact Energy Partners, LLC)\\
-Electronic ``Bell'' web app in PhP Laravel and Lit web components,
-MariaDB\\
-(for Elementary School ``Đura Jakšić'' in Kovin)\\
-LibreOffice Calc template document w/ numerous custom-scripts, tables
-for invoice generation (for NewCare LM Group, Ltd., Care Connection 12
-Ltd., Medical Care Pro Ltd.)\\
-Web page in PhP Laravel with Lit web components, MariaDB\\
-(for ``Daxer N'' company in Smederevo)\\
-JavaFX app with Hibernate, MariaDB for automatic email sending with attachment\\
-(for NewCare LM Group, Ltd., Care Connection 12 Ltd., Medical Care Pro
-Ltd.)
+Coding fundamentals, JavaSE, JavaFX, JavaEE, JPA, JMS, JSP,  Quarkus, MySql
 
-\section{LANGUAGES}
+\vfill
+\raggedleft \small Created $\in$ \LaTeX 
+\hfill
+\longdate\displaydate{theDate}
 
-English -- Intermediate proficiency (speaking, writing, reading)
-
-\section{SKILLS}
-
-Coding fundamentals, JavaEE, JPA, JMS, JSP,  Quarkus, JavaFX, Oracle DB, MySql
 
 \end{document}
