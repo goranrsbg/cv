@@ -1,4 +1,5 @@
-*.log
-*.pdf
-*.aux
-*.gz
+/*.log
+/*.pdf
+/*.aux
+/*.synctex.gz
+
