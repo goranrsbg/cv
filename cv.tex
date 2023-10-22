@@ -1,17 +1,17 @@
 \documentclass{article}
 % packages
-\usepackage[T1]{fontenc}
-\usepackage{graphicx}
-\usepackage{titlesec}
-\usepackage[dayofweek]{datetime}
+% page margins
 \usepackage[margin=51pt]{geometry}
-\usepackage{wrapfig}
-\usepackage{xcolor}
-\usepackage{setspace}
-\usepackage{fancyhdr}
-\usepackage{atbegshi,picture}
-\usepackage[super]{nth}
-\usepackage{array,multirow,booktabs}
+\usepackage[T1]                {fontenc}
+\usepackage                       {graphicx}
+\usepackage                       {titlesec}
+\usepackage[dayofweek]  {datetime}
+\usepackage                       {wrapfig}
+\usepackage                       {xcolor}
+\usepackage                       {fancyhdr}
+\usepackage                       {atbegshi,picture}
+\usepackage[super]           {nth}
+\usepackage                       {multirow}
 % details
 \author{Cvijanović Goran}
 \title{Curriciulum Vitae}
@@ -27,7 +27,6 @@
 % config
 \graphicspath{{img/}}
 \pagenumbering{gobble}
-\AfterEndEnvironment{figure}{\noindent\ignorespaces}
 % top-right-corner title
 \AtBeginShipout{\AtBeginShipoutUpperLeft{
   \put(\dimexpr\paperwidth-51pt\relax,-91pt){\makebox[0pt][r]{\Large Curriculum Vitae}}
@@ -89,14 +88,14 @@ $\rangle\!\rangle$ ``Daxer N'' company $\in$ Smederevo
 $\rangle\!\rangle$ NewCare LM Group ltd., Care Connection 12 ltd., Medical Care Pro ltd.
 \end{itemize}
 
+\section{\textsc{Core Skills}}
+
+coding fundamentals, JavaSE, JavaFX, JavaEE, JPA, JMS, JSP,  Quarkus, MySql
+
 \section{\textsc{Foreign Language}}
 
 English  -- Intermediate working proficiency (speaking, writing, reading)\\
 Russian -- Beginner level
-
-\section{\textsc{Core Skills}}
-
-coding fundamentals, JavaSE, JavaFX, JavaEE, JPA, JMS, JSP,  Quarkus, MySql
 
 \section{\textsc{Free Time Activities}}
 
