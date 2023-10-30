@@ -1,4 +1,4 @@
-# The Resume v1.0
+# The Resume v1.01
 
 CV made by GC.
 
