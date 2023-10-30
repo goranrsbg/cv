@@ -13,6 +13,7 @@
 \usepackage[super]           {nth}
 \usepackage                       {multirow}
 \usepackage                      {enumitem}
+\usepackage                      {hyperref}
 % details
 \author{Cvijanović Goran}
 \title{Curriciulum Vitae}
@@ -32,9 +33,17 @@
 \AtBeginShipout{\AtBeginShipoutUpperLeft{
   \put(\dimexpr\paperwidth-51pt\relax,-91pt){\makebox[0pt][r]{\Large Curriculum Vitae}}
 }}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=cyan,      
+    urlcolor=cyan,
+    pdftitle={},
+    pdfpagemode=FullScreen,
+    }
 % formats
 \titleformat{\section}
-{\centering}
+{\centering\color{cyan}}
 {}
 {0pt}
 {}[\color{gray!50}\titlerule]
@@ -45,10 +54,10 @@
 \multirow{6}{*}{\includegraphics[width=73pt]{intro.png}}
 &                      & Cvijanović Goran \\
 & email             & goran.rs.bg@gmail.com \\
-& phone           & 064/147-23-53 \\
+& phone           & \href{tel:0641472353}{064/147-23-53} \\
 & date of birth & November \nth{16}, 1982 \\
 & address        & Branka Miljkovića 1a/6,11210 Belgrade  \\
-& GIT               & www.github.com/goranrsbg \\
+& GiT               & \href{www.github.com/goranrsbg}{goranrsbg} \\
 \end{tabular}
 
 \section{\textsc{Work Experience}}
@@ -79,12 +88,12 @@ $\rangle\!\rangle$ Comyno dlt d.o.o. for the period of six months
 $\rangle\!\rangle$ Impact Energy Partners LLC
 \item BI Domo dashboards, charts, data connections, data transformations using MySQL\\
 $\rangle\!\rangle$ Impact Energy Partners LLC
-\item Web app ``Electronic Bell'' in Laravel the PHP Framework and js Lit simple fast web components, MariaDB\\
+\item Web app \href{https://zvono.nastavnikinformatike.com}{``Electronic Bell''} in Laravel the PHP Framework and js Lit simple fast web components, MariaDB\\
 $\rangle\!\rangle$ Elementary School ``Đura Jakšić'' $\in$ Kovin
 \item LibreOffice Calc template document numerous custom-scripts, tables for invoice generation\\ 
 $\rangle\!\rangle$ NewCare LM Group ltd., Care Connection 12 ltd., Medical Care Pro ltd.
 \item Web page in Laravel the PHP Framework and js Lit simple fast web components, MariaDB\\
-$\rangle\!\rangle$ ``Daxer N'' company $\in$ Smederevo
+$\rangle\!\rangle$ \href{https://www.daxern.rs}{``Daxer N'}' company $\in$ Smederevo
 \item ``gInvoicer'', JavaFX app with Hibernate, MariaDB for automatic email sending with attached invoice\\
 $\rangle\!\rangle$ NewCare LM Group ltd., Care Connection 12 ltd., Medical Care Pro ltd.
 \item ``GRKreator'' JavaFX; Apache Derby, for creating and printing cash account\\
@@ -93,7 +102,7 @@ $\rangle\!\rangle$ ``Stihl Service'', Kolari Smederevo
 
 \section{\textsc{Core Skills}}
 
-coding fundamentals, JavaSE, JavaFX, JavaEE, JPA, JMS, JSP,  Quarkus, (my, postgre, oracle, derby)Sql
+coding fundamentals, JavaSE, JavaFX, sql, JavaEE, JPA, JMS, JSP,  Quarkus, GiT, Jira
 
 \section{\textsc{Foreign Language}}
 
