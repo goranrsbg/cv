@@ -17,6 +17,8 @@
 % details
 \author{Cvijanović Goran}
 \title{Curriciulum Vitae}
+\definecolor{LINKS_COLOR}{HTML}{AA4F4F}
+\definecolor{TITLE_LINE_COLOR}{HTML}{5088AB}
 % footer
 \thispagestyle{fancy}
 \fancyhf{}
@@ -35,44 +37,44 @@
 }}
 \hypersetup{
     colorlinks=true,
-    linkcolor=cyan,
-    filecolor=cyan,      
-    urlcolor=cyan,
+    linkcolor=LINKS_COLOR,
+    filecolor=LINKS_COLOR,      
+    urlcolor=LINKS_COLOR,
     pdftitle={},
     pdfpagemode=FullScreen,
     }
 % formats
 \titleformat{\section}
-{\centering\color{cyan}}
+{\centering\bfseries}
 {}
 {0pt}
-{}[\color{gray!50}\titlerule]
+{}[\color{TITLE_LINE_COLOR}\titlerule]
 % the begin
 \begin{document}
 
 \begin{tabular}{l r l}
 \multirow{6}{*}{\includegraphics[width=73pt]{intro.png}}
 &                      & Cvijanović Goran \\
-& email             & goran.rs.bg@gmail.com \\
+& email             & \href{mailto:goran.rs.bg@gmail.com}{goran.rs.bg@gmail.com} \\
 & phone           & \href{tel:0641472353}{064/147-23-53} \\
 & date of birth & November \nth{16}, 1982 \\
 & address        & Branka Miljkovića 1a/6,11210 Belgrade  \\
-& GiT               & \href{www.github.com/goranrsbg}{goranrsbg} \\
+& GiT               & \href{https://www.github.com/goranrsbg}{goranrsbg} \\
 \end{tabular}
 
 \section{\textsc{Work Experience}}
 
-\begin{tabular}{l | l} 
-2022 -- current (full-time) & Senior Software Engineer at Comyno dlt d.o.o.\\
-2021 -- 2022 (part-time)  & Chief Data Officer at Impact Energy Partners, LLC (California, US)\\
-2018 -- 2022 (part-time)  & Head Administrator at NewCare LM Group Ltd., Care Connection 12 Ltd.,\\
-                                         & Medical Care Pro Ltd. (Doncaster, UK)\\
-2015 -- 2021                    & Freelancer, Independent engagement
+\begin{tabular}{ l c  l | l | l} 
+2022-06 &--& 2023-11      & (full-time)    & Senior Software Engineer at Comyno dlt d.o.o.\\
+2021-01 &--& 2022-04      & (part-time)  & Chief Data Officer at Impact Energy Partners, LLC (California, US) \\
+2018      &--& 2022           & (part-time)  & Head Administrator at NewCare LM Group Ltd., \\
+              &  &                     &                    & Care Connection 12 Ltd., Medical Care Pro Ltd. (Doncaster, UK) \\
+2015      &--& 2021           & (full-time)    & Freelancer, Independent engagement
 \end{tabular}
 
 \section{\textsc{Education}}
 
-2021 -- 2022 -- Domo University, DomoMajor Certificate, Online \\
+2021 -- 2022 -- Domo University, \href{https://drive.google.com/file/d/1i-GzyE43WospitxXdFWp2bRYe6wqZG48/view?usp=sharing}{MajorDomo Certificate}, Online \\
 2012 -- 2013 -- IT Academy, Software Developer Certificate, Belgrade \\
 2000 -- 2002 -- Faculty of Mathematics, University of Belgrade \\
 1996 -- 2000 -- High School of Electrical Engineering, Smederevo
@@ -80,33 +82,33 @@
 \section{\textsc{Software Projects}}
 
 \begin{itemize}[parsep=1.5pt]
-\item  FinTech Web App, Primefaces, Hibernate, JavaEE 8; Oracle DB\\
+\item  FinTech Web App, Primefaces, Hibernate, JavaEE 8; Oracle DB \\
 $\rangle\!\rangle$ Comyno dlt d.o.o.
-\item Connector Web App, Quarkus; PostgreSQL, from rest api $\hookrightarrow$ map and push $\mapsto$ JMS\\
+\item Connector Web App, Quarkus; PostgreSql, from rest api $\hookrightarrow$ map and push $\mapsto$ Apache ActiveMQ Artemis \\
 $\rangle\!\rangle$ Comyno dlt d.o.o. for the period of six months
-\item G-Sheet, custom arithmetic script\\
+\item G-Sheet, \href{https://docs.google.com/spreadsheets/d/1ztJoonmA0d0AyNDwVE1vnjpOPPpM03JF1eWCHwfQ4ZA/edit?usp=sharing}{Personal Calculator}, custom arithmetic script \\
 $\rangle\!\rangle$ Impact Energy Partners LLC
-\item BI Domo dashboards, charts, data connections, data transformations using MySQL\\
+\item BI Domo dashboards, charts, data connections, data transformations using MySql \\
 $\rangle\!\rangle$ Impact Energy Partners LLC
-\item Web app \href{https://zvono.nastavnikinformatike.com}{``Electronic Bell''} in Laravel the PHP Framework and js Lit simple fast web components, MariaDB\\
+\item Web app \href{https://zvono.nastavnikinformatike.com}{``Electronic Bell''} in Laravel \& LitElement, MariaDB \\
 $\rangle\!\rangle$ Elementary School ``Đura Jakšić'' $\in$ Kovin
-\item LibreOffice Calc template document numerous custom-scripts, tables for invoice generation\\ 
+\item LibreOffice Calc template document numerous custom-scripts, tables for invoice generation, \href{https://docs.google.com/spreadsheets/d/1Hh9O7KoN8RETCPzJl5zVYV3CQdjvu2Qtbiu3tu5O9LY/edit?usp=sharing}{Small Sheet} \\ 
 $\rangle\!\rangle$ NewCare LM Group ltd., Care Connection 12 ltd., Medical Care Pro ltd.
-\item Web page in Laravel the PHP Framework and js Lit simple fast web components, MariaDB\\
-$\rangle\!\rangle$ \href{https://www.daxern.rs}{``Daxer N'}' company $\in$ Smederevo
-\item ``gInvoicer'', JavaFX app with Hibernate, MariaDB for automatic email sending with attached invoice\\
+\item Web page in Laravel \& LitElement, MariaDB \\
+$\rangle\!\rangle$ \href{https://www.daxern.rs}{``Daxer N''} company $\in$ Smederevo
+\item \href{https://github.com/goranrsbg/gInvoicer}{``gInvoicer''}, JavaFX app with Hibernate, MariaDB for automatic email sending with attached invoice \\
 $\rangle\!\rangle$ NewCare LM Group ltd., Care Connection 12 ltd., Medical Care Pro ltd.
-\item ``GRKreator'' JavaFX; Apache Derby, for creating and printing cash account\\
+\item \href{https://github.com/goranrsbg/GRKreator}{``GRKreator''}, JavaFX; Apache Derby, for creating \& printing cash account \\
 $\rangle\!\rangle$ ``Stihl Service'', Kolari Smederevo
 \end{itemize}
 
 \section{\textsc{Core Skills}}
 
-coding fundamentals, JavaSE, JavaFX, sql, JavaEE, JPA, JMS, JSP,  Quarkus, GiT, Jira
+coding fundamentals, JavaSE, JavaFX, JavaEE, JPA, JMS, JSP,  sql, Quarkus, GiT
 
 \section{\textsc{Foreign Language}}
 
-English  -- Intermediate working proficiency (speaking, writing, reading)\\
+English  -- Intermediate working proficiency (speaking, writing, reading) \\
 Russian -- Beginner level
 
 \section{\textsc{Free Time Activities}}
