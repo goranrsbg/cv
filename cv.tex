@@ -1,8 +1,10 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 % packages
 % page margins
 \usepackage[margin=51pt]{geometry}
 \usepackage[T1]{fontenc}
+\usepackage{fontawesome5} 
+\usepackage{tikzsymbols}
 \usepackage{graphicx}
 \usepackage{titlesec}
 \usepackage[dayofweek]{datetime}
@@ -14,9 +16,11 @@
 \usepackage{multirow}
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{booktabs}
 % details
 \author{Cvijanović Goran}
 \title{Curriciulum Vitae}
+% colors
 \definecolor{LINKCOLOR}{HTML}{AA4F4F}
 \definecolor{TITLELINECOLOR}{HTML}{5088AB}
 % footer
@@ -28,12 +32,14 @@
 \fancyfoot[R]{\longdate\displaydate{theDate}}
 \newdate{theDate}{\day}{\month}{\year}
 \renewcommand{\dateseparator}{.}
+% \newcommand{\tabitem}{~~\llap{\textbullet}~~}
+% \renewcommand{\familydefault}{\sfdefault}
 % config
 \graphicspath{{img/}}
 \pagenumbering{gobble}
 % top-right-corner title
-\AtBeginShipout{\AtBeginShipoutUpperLeft{
-  \put(\dimexpr\paperwidth-51pt\relax,-91pt){\makebox[0pt][r]{\Large Curriculum Vitae}}
+\AtBeginShipoutNext{\AtBeginShipoutUpperLeft{
+    \put(\dimexpr\paperwidth-51pt\relax,-91pt){\makebox[0pt][r]{\Large Curriculum Vitae}}
 }}
 \hypersetup{
     colorlinks=true,
@@ -42,42 +48,71 @@
     urlcolor=LINKCOLOR,
     pdftitle={},
     pdfpagemode=FullScreen,
-    }
+}
 % formats
 \titleformat{\section}
-{\centering\bfseries}
+{\centering}
 {}
 {0pt}
 {}[\color{TITLELINECOLOR}\titlerule]
+
 % the begin
 \begin{document}
 
 \begin{tabular}{l r l}
 \multirow{6}{*}{\includegraphics[width=73pt]{intro.png}}
-    &               & Cvijanović Goran \\
-    & email         & \href{mailto:goran.rs.bg@gmail.com}{goran.rs.bg@gmail.com} \\
-    & phone         & \href{tel:0641472353}{064/147-23-53} \\
-    & date of birth & November \nth{16}, 1982 \\
-    & address       & Branka Miljkovića 1a/6,11210 Belgrade  \\
-    & GiT           & \href{https://www.github.com/goranrsbg}{goranrsbg} \\
+    &                 & Cvijanović Goran \\
+    &                 & Java Developer \\
+    & \faEnvelope     & \href{mailto:goran.rs.bg@gmail.com}{goran.rs.bg@gmail.com} \\
+    & \faPhone        & \href{tel:0641472353}{064/147-23-53} \\
+    & \faBirthdayCake & November \nth{16}, 1982 \\
+    & \faStreetView   & Branka Miljkovića 1a/6,11210 Belgrade  \\
+    & \faGitSquare    & \href{https://www.github.com/goranrsbg}{goranrsbg} \\
 \end{tabular}
 
 \section{\textsc{Work Experience}}
 
-\begin{tabular}{ l c  l | l | l} 
-    2022-06 &--& 2023-11 & (full-time) & Senior Software Engineer at Comyno dlt d.o.o.\\
-    2021-01 &--& 2022-04 & (part-time) & Chief Data Officer at Impact Energy Partners, LLC (California, US) \\
-    2018    &--& 2022    & (part-time) & Head Administrator at NewCare LM Group Ltd., \\
-            &  &         &             & Care Connection 12 Ltd., Medical Care Pro Ltd. (Doncaster, UK) \\
-    2015    &--& 2021    & (full-time) & Freelancer, Independent engagement
-\end{tabular}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item 2022-06 -- 2023-11 (full-time) \\ 
+          Senior Java Developer at Comyno dlt d.o.o. \\
+          Responsibilities:
+          \begin{itemize}
+            \setlength\itemsep{0em}
+            \item fix bugs, optimize, cover with unit or integration test
+            \item extend feature, cover with unit or integration tests
+            \item add new feature, implement using TDD
+            \item add missing JMS queues, update service, entity, add DB migration, update docs
+          \end{itemize}
+    \item  2021-01 -- 2022-04 (part-time) Chief Data Officer at Impact Energy Partners, LLC (California, US) 
+    \item  2018    -- 2022    (part-time) Head Administrator at NewCare LM Group Ltd.,
+         Care Connection 12 Ltd., Medical Care Pro Ltd. (Doncaster, UK) 
+    \item  2015    -- 2021 (full-time) Freelancer, Independent engagement
+\end{itemize}
 
 \section{\textsc{Education}}
 
-2021 -- 2022 -- Domo University, \href{https://drive.google.com/file/d/1i-GzyE43WospitxXdFWp2bRYe6wqZG48/view?usp=sharing}{MajorDomo Certificate}, Online \\
-2012 -- 2013 -- IT Academy, Software Developer Certificate, Belgrade \\
 2000 -- 2002 -- Faculty of Mathematics, University of Belgrade \\
+2012 -- 2013 -- IT Academy, Software Developer Certificate, Belgrade \\
+2021 -- 2022 -- Domo University, \href{https://drive.google.com/file/d/1i-GzyE43WospitxXdFWp2bRYe6wqZG48/view?usp=sharing}{MajorDomo Certificate}, Online \\
 1996 -- 2000 -- High School of Electrical Engineering, Smederevo
+
+\section{\textsc{Foreign Language}} 
+
+\begin{tabular}{l c l}
+    English &--& Intermediate working proficiency (speaking, writing, reading) \\
+    Russian &--& Beginner level
+\end{tabular}
+
+\section{\textsc{Core Skills}}
+
+coding fundamentals, Java, sql
+
+\section{\textsc{Free Time Activities}}
+
+rock climbing, biliard, bowling, hiking, kart racing, reading, writing
+
+\pagebreak
 
 \section{\textsc{Software Projects}}
 
@@ -101,20 +136,5 @@ $\rangle\!\rangle$ NewCare LM Group ltd., Care Connection 12 ltd., Medical Care 
 \item \href{https://github.com/goranrsbg/GRKreator}{``GRKreator''}, JavaFX; Apache Derby, for creating \& printing cash account \\
 $\rangle\!\rangle$ ``Stihl Service'', Kolari Smederevo
 \end{itemize}
-
-\section{\textsc{Core Skills}}
-
-coding fundamentals, Java, sql
-
-\section{\textsc{Foreign Language}}
-
-\begin{tabular}{l c l}
-    English &--& Intermediate working proficiency (speaking, writing, reading) \\
-    Russian &--& Beginner level
-\end{tabular}
-
-\section{\textsc{Free Time Activities}}
-
-bouldering, biliard, bowling, hiking, kart racing, reading, writing
 
 \end{document}
