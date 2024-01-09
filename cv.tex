@@ -23,6 +23,7 @@
 % colors
 \definecolor{LINKCOLOR}{HTML}{AA4F4F}
 \definecolor{TITLELINECOLOR}{HTML}{5088AB}
+\definecolor{ICONCOLOR}{HTML}{5088AB}
 % footer
 \thispagestyle{fancy}
 \fancyhf{}
@@ -54,20 +55,20 @@
 {\centering}
 {}
 {0pt}
-{}[\color{TITLELINECOLOR}\titlerule]
+{}[\color{TITLELINECOLOR}{\titlerule[2pt]}]
 
 % the begin
 \begin{document}
 
 \begin{tabular}{l r l}
 \multirow{6}{*}{\includegraphics[width=73pt]{intro.png}}
-    &                 & Cvijanović Goran \\
-    &                 & Java Developer \\
-    & \faEnvelope     & \href{mailto:goran.rs.bg@gmail.com}{goran.rs.bg@gmail.com} \\
-    & \faPhone        & \href{tel:0641472353}{064/147-23-53} \\
-    & \faBirthdayCake & November \nth{16}, 1982 \\
-    & \faStreetView   & Branka Miljkovića 1a/6,11210 Belgrade  \\
-    & \faGitSquare    & \href{https://www.github.com/goranrsbg}{goranrsbg} \\
+    &                                    & Cvijanović Goran \\
+    &                                    & Java Developer \\
+    & {\color{ICONCOLOR}\faEnvelope}     & \href{mailto:goran.rs.bg@gmail.com}{goran.rs.bg@gmail.com} \\
+    & {\color{ICONCOLOR}\faPhone}        & \href{tel:0641472353}{064/147-23-53} \\
+    & {\color{ICONCOLOR}\faBirthdayCake} & November \nth{16}, 1982 \\
+    & {\color{ICONCOLOR}\faStreetView}   & Branka Miljkovića 1a/6,11210 Belgrade  \\
+    & {\color{ICONCOLOR}\faGitSquare}    & \href{https://www.github.com/goranrsbg}{goranrsbg} \\
 \end{tabular}
 
 \section{\textsc{Work Experience}}
